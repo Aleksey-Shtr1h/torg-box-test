@@ -1,0 +1,56 @@
+.choice-time {
+  margin-top: 20%;
+}
+
+.choice-time__form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5% 0%;
+
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.choice-time__form-caption {
+  margin-bottom: 10%;
+  padding: 0% 5% 5% 5%;
+
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+
+  border-bottom: 1px solid #000;
+}
+
+.choice-time__form-type { 
+  align-self: center;
+
+  padding: 0 10px;
+  margin: 10%;
+
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.choice-time__btn {
+  align-self: center;
+
+  padding: 5px 15px;
+
+  background-color: #2f2c2cab;
+
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  border-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+}

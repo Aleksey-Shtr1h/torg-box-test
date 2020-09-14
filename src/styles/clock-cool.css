@@ -1,0 +1,160 @@
+.container-clock {
+	/*position: relative;*/
+	display: flex;
+	justify-content: center;
+} 
+
+.clock {
+	margin: 0 auto;
+
+	width: 200px;
+	height: 200px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-size: cover;
+	border-radius: 50%;
+	box-shadow: 0 -15px 15px rgba(134, 134, 134, 0.35),
+	inset 0 -15px 15px #191919,
+	0 15px 15px rgba(134, 134, 134, 0.35),
+	inset 0 15px 15px #191919;
+}
+
+.clock:before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	z-index: 999;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+	position: absolute;
+}
+
+.clock .hour, .hr {
+	width: 70px;
+	height: 70px;
+}
+
+.clock .min, .mn {
+	width: 140px;
+	height: 140px;
+}
+
+.clock .sec, .sc {
+	width: 170px;
+	height: 170px;
+}
+
+.hr, .mn, .sc {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.hr:before {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 47px;
+	background-color: #ffc600;
+	z-index: 10;
+	border-radius: 100% 50%;
+}
+
+.mn:before {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 80px;
+	background-color: #fff;
+	z-index: 11;
+	border-radius: 100% 50%;;
+}
+
+.sc:before {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 105px;
+	background-color: #fff;
+	z-index: 12;
+	border-radius: 6px 6px 0 0;
+}
+
+.clock__stroke {
+	position: absolute;
+
+	display: flex;
+	justify-content: center;
+
+	width: inherit;
+	height: inherit;
+}
+
+.clock__stroke::after {
+	content: '';
+	position: absolute;
+	width: 3%;
+	height: 5%;
+	background-color: #ffffff87;
+	z-index: 12;
+	border-radius: 0 0 6px 6px;
+}
+
+.clock__stroke--0 {
+	transform: rotate(0deg);
+}
+
+.clock__stroke--5 {
+	transform: rotate(30deg);
+}
+
+.clock__stroke--10 {
+	transform: rotate(60deg);
+}
+
+.clock__stroke--15 {
+	transform: rotate(90deg);
+}
+
+.clock__stroke--20 {
+	transform: rotate(120deg);
+}
+
+.clock__stroke--25 {
+	transform: rotate(150deg);
+}
+
+.clock__stroke--30 {
+	transform: rotate(180deg);
+}
+
+.clock__stroke--35 {
+	transform: rotate(210deg);
+}
+
+.clock__stroke--40 {
+	transform: rotate(240deg);
+}
+
+.clock__stroke--45 {
+	transform: rotate(270deg);
+}
+
+.clock__stroke--50 {
+	transform: rotate(300deg);
+}
+
+.clock__stroke--55 {
+	transform: rotate(330deg);
+}
+

@@ -1,0 +1,17 @@
+.digital-time {
+  margin: 10% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 1px solid #000;
+}
+
+.digital-time__value {
+  align-self: center;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #751035;
+}
