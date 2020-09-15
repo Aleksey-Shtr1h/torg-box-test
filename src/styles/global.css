@@ -9,9 +9,13 @@
 body {
   font-family: "Open Sans", "Roboto", sans-serif;
 
+  display: -ms-flexbox;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   min-height: 100vh;
   background: #b5b2b2;
 }

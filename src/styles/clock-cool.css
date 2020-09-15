@@ -1,7 +1,8 @@
 .container-clock {
-	/*position: relative;*/
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
 } 
 
 .clock {
@@ -10,9 +11,13 @@
 	width: 200px;
 	height: 200px;
 
+	display: -ms-flexbox;
+
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
 
 	background-size: cover;
 	border-radius: 50%;
@@ -54,8 +59,10 @@
 }
 
 .hr, .mn, .sc {
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
 	position: absolute;
 	border-radius: 50%;
 }
@@ -93,8 +100,11 @@
 .clock__stroke {
 	position: absolute;
 
+	display: -ms-flexbox;
+
 	display: flex;
-	justify-content: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
 
 	width: inherit;
 	height: inherit;

@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import {ActionTypeApp} from '../../redux/app/app-action.js';
-
 import {timeArrow} from '../../utils/utils.js';
 import {timeInterval} from '../../constans.js';
 

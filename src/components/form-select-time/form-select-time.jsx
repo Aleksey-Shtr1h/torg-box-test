@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 
 import {ActionCreatorApp} from '../../redux/app/app-action.js';
 
@@ -8,8 +8,6 @@ import {CityTimeOptions} from '../../constans.js';
 import '../../styles/formselect-time.css';
 
 export const FormSelectTime = () => {
-  // const cityNameActive = useSelector((state) => state.APP.cityNameActive);
-
   const [cityName, setCityName] = useState(`Красноярск`); 
 
   const dispatch = useDispatch();
