@@ -3,10 +3,8 @@
 }
 
 .choice-time__form {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
 
   padding: 5% 0%;
 
@@ -31,7 +29,6 @@
 
 .choice-time__form-type { 
   -ms-grid-row-align: center; 
-      -ms-flex-item-align: center; 
       align-self: center;
 
   padding: 0 10px;
@@ -43,7 +40,6 @@
 
 .choice-time__btn {
   -ms-grid-row-align: center;
-      -ms-flex-item-align: center;
       align-self: center;
 
   padding: 5px 15px;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {Main} from '../main/main.jsx';
+import {Main} from '@components/main/main.jsx';
 
-import '../../styles/global.css';
+import '@src/styles/main.scss';
 
 export const App = () => {
   return (

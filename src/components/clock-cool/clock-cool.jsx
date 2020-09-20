@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import {timeArrow} from '../../utils/utils.js';
-import {timeInterval} from '../../constans.js';
-
-import '../../styles/clock-cool.css';
+import {timeArrow} from '@src/utils-js/utils.js';
+import {timeInterval} from '@src/constans.js';
 
 export const ClockCool = () => {
   const timeZone = useSelector((state) => state.APP.timeZone);

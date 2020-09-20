@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import {timeDigital} from '../../utils/utils.js';
-import {timeInterval} from '../../constans.js';
-
-import '../../styles/clock-digital.css';
+import {timeDigital} from '@src/utils-js/utils.js';
+import {timeInterval} from '@src/constans.js';
 
 export const ClockDigital  = () => {
   const timeZone = useSelector((state) => state.APP.timeZone);

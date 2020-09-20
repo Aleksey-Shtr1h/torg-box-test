@@ -1,0 +1,163 @@
+.container-clock {
+	display: flex;
+	justify-content: center;
+} 
+
+.clock {
+	margin: 0 auto;
+
+	width: 200px;
+	height: 200px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-size: cover;
+	border-radius: 50%;
+	box-shadow: 0 -15px 15px rgba(134, 134, 134, 0.35),
+	inset 0 -15px 15px #191919,
+	0 15px 15px rgba(134, 134, 134, 0.35),
+	inset 0 15px 15px #191919;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		background-color: #ffffff;
+		border-radius: 50%;
+		z-index: 999;
+	}
+
+}
+
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+	position: absolute;
+}
+
+.clock .hour, .hr {
+	width: 70px;
+	height: 70px;
+}
+
+.clock .min, .mn {
+	width: 140px;
+	height: 140px;
+}
+
+.clock .sec, .sc {
+	width: 170px;
+	height: 170px;
+}
+
+.hr, .mn, .sc {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.hr:before {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 47px;
+	background-color: #ffc600;
+	z-index: 10;
+	border-radius: 100% 50%;
+}
+
+.mn:before {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 80px;
+	background-color: #fff;
+	z-index: 11;
+	border-radius: 100% 50%;;
+}
+
+.sc:before {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 105px;
+	background-color: #fff;
+	z-index: 12;
+	border-radius: 6px 6px 0 0;
+}
+
+.clock__stroke {
+	position: absolute;
+
+	display: flex;
+	justify-content: center;
+
+	width: inherit;
+	height: inherit;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 3%;
+		height: 5%;
+		background-color: #ffffff87;
+		z-index: 12;
+		border-radius: 0 0 6px 6px;
+	}
+
+}
+
+.clock__stroke {
+	&--0 {
+		@include clockRotate(rotate(0deg)); 
+	}
+
+	&--5 {
+		@include clockRotate(rotate(30deg)); 
+	}
+
+	&--10 {
+		@include clockRotate(rotate(60deg)); 
+	}
+
+	&--15 {
+		@include clockRotate(rotate(90deg)); 
+	}
+
+	&--20 {
+		@include clockRotate(rotate(120deg)); 
+	}
+
+	&--25 {
+		@include clockRotate(rotate(150deg)); 
+	}
+
+	&--30 {
+		@include clockRotate(rotate(180deg)); 
+	}
+
+	&--35 {
+		@include clockRotate(rotate(210deg)); 
+	}
+
+	&--40 {
+		@include clockRotate(rotate(240deg)); 
+	}
+
+	&--45 {
+		@include clockRotate(rotate(270deg)); 
+	}
+
+	&--50 {
+		@include clockRotate(rotate(300deg)); 
+	}
+
+	&--55 {
+		@include clockRotate(rotate(330deg)); 
+	} 
+}
