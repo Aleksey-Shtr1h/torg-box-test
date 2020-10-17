@@ -6,11 +6,8 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const autoprefixer = require('autoprefixer');
 
-const isDev = process.env.NODE_ENV === 'development';
-
 module.exports = {
   context: path.resolve(__dirname, 'src'), 
-  // mode: isDev ? 'production' : 'development',
   entry: {
     main: './index.js',
   },
@@ -27,7 +24,7 @@ module.exports = {
       '@style': path.resolve(__dirname, 'src/style'),
       '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
       '@img': path.resolve(__dirname, 'src/assets/img'),
-      // '@favicon': path.resolve(__dirname, 'src/assets/favicon'),
+      '@favicon': path.resolve(__dirname, 'src/assets/favicon'),
     }
   },
 
@@ -41,8 +38,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     port: 3000,
-    // open: true,
-    hot: isDev,
+    open: true,
     historyApiFallback: true,
   },
 

@@ -5,7 +5,7 @@ import {ActionCreatorApp} from '@src/redux/app/app-action.js';
 
 import {CityTimeOptions} from '@src/constans.js';
 
-export const FormSelectTime = () => {
+export const FormSelectTime = ({onTimeZoneClockClick}) => {
   const [cityName, setCityName] = useState(`Красноярск`); 
 
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ export const FormSelectTime = () => {
           className="choice-time__btn" 
           type="button"
           onClick={() => 
-            dispatch(ActionCreatorApp.actionChangeTime(cityName))
+            onTimeZoneClockClick(cityName)
           }
         >
           Выбрать

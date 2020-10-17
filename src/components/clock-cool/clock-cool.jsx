@@ -1,27 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import {useSelector} from 'react-redux';
+import React from 'react';
 
 import {timeArrow} from '@src/utils-js/utils.js';
-import {timeInterval} from '@src/constans.js';
 
-export const ClockCool = () => {
-  const timeZone = useSelector((state) => state.APP.timeZone);
+export const ClockCool = ({date, timeZone}) => {
 
-  const [hour, setHour] = useState(timeArrow.getHour(timeZone));
-  const [minute, setMinute] = useState(timeArrow.getMinute());
-  const [second, setSecond] = useState(timeArrow.getSecond());
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHour(timeArrow.getHour(timeZone));
-      setMinute(timeArrow.getMinute(timeZone));
-      setSecond(timeArrow.getSecond(timeZone));
-
-    }, timeInterval);
-
-    return () => clearInterval(interval);
-
-  }, [timeZone]);
+  const hour = timeArrow.getHour(timeZone, date);
+  const minute = timeArrow.getMinute(timeZone, date);
+  const second = timeArrow.getSecond(timeZone, date);
 
   return (
 

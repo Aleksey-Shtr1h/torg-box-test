@@ -1,27 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import {useSelector} from 'react-redux';
+import React from 'react';
 
 import {timeDigital} from '@src/utils-js/utils.js';
-import {timeInterval} from '@src/constans.js';
 
-export const ClockDigital  = () => {
-  const timeZone = useSelector((state) => state.APP.timeZone);
+export const ClockDigital  = ({date, timeZone}) => {
 
-  const [hour, setHour] = useState(timeDigital.getHour(timeZone));
-  const [minute, setMinute] = useState(timeDigital.getMinute(timeZone));
-  const [second, setSecond] = useState(timeDigital.getSecond(timeZone));
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHour(timeDigital.getHour(timeZone));
-      setMinute(timeDigital.getMinute(timeZone));
-      setSecond(timeDigital.getSecond(timeZone));
-
-    }, timeInterval);
-
-    return () => clearInterval(interval);
-
-  }, [timeZone]);
+  const hour = timeDigital.getHour(timeZone, date);
+  const minute = timeDigital.getMinute(timeZone, date);
+  const second = timeDigital.getSecond(timeZone, date);
 
   return (
     <section className="digital-time">
